@@ -1,15 +1,29 @@
 # Simulations
 
-Python simulations that run in Google Colab.
+Google Colabで実行するPythonシミュレーションのコレクションです。各シミュレーションを独立したディレクトリで管理し、ノートブック・説明・結果をまとめます。
 
-## 2D Infection Simulation
+## Simulations
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ryouy/simulations/blob/main/infection_simulation.ipynb)
+| Simulation | Description | Notebook |
+| --- | --- | --- |
+| [Infection Spread](simulations/infection-spread/README.md) | 2D particle infection model | [Open in Colab](https://colab.research.google.com/github/ryouy/simulations/blob/main/simulations/infection-spread/infection_simulation.ipynb) |
 
-[Notebook](infection_simulation.ipynb) · [Open in Google Colab](https://colab.research.google.com/github/ryouy/simulations/blob/main/infection_simulation.ipynb)
+## Structure
 
-30 particles move within a 2D square. Initially one particle is red (infected); contact spreads infection to white particles. Run the notebook top to bottom to view the animation and export MP4, GIF, CSV, PNG, and JSON outputs.
+```text
+simulations/
+└── infection-spread/
+    ├── README.md
+    ├── infection_simulation.ipynb
+    └── outputs/                 # Generated after running Colab
+        ├── infection.gif
+        ├── infection_curve.png
+        ├── infection_counts.csv
+        └── settings.json
+```
 
-To push outputs to this repository, set `GITHUB_TOKEN` in **Colab → Secrets**, allow notebook access, and run the final cell. The token needs **Contents: Read and write** access to `ryouy/simulations`. Never commit the token.
+新しいシミュレーションは `simulations/<simulation-name>/` に追加します。各ディレクトリのREADMEに目的・Colabリンク・GIFプレビュー・出力一覧を記載します。
 
-Generated outputs are stored in `outputs/` when uploaded.
+## GitHub output upload
+
+Colab Secretsに `GITHUB_TOKEN` を登録し、対象リポジトリの **Contents: Read and write** 権限を与えてください。各ノートブックのアップロードセルで結果を対応する `outputs/` に保存します。READMEの相対GIFリンクにより、アップロード後はGitHub上に最新アニメーションが表示されます。トークンをコードやコミットに含めないでください。
