@@ -1,0 +1,9 @@
+{
+  "nodes": 500,
+  "steps": 400,
+  "degree": 4,
+  "graph": "Scale-free",
+  "parameter1": 0.15,
+  "parameter2": 0.45,
+  "seed": 42
+}
