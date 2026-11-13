@@ -1,8 +1,8 @@
 {
-  "nodes": 120,
-  "steps": 100,
+  "nodes": 370,
+  "steps": 400,
   "degree": 4,
-  "graph": "Scale-free",
+  "graph": "Small-world",
   "parameter1": 0.25,
   "parameter2": 3,
   "seed": 42
