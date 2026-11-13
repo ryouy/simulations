@@ -3,7 +3,7 @@
   "steps": 400,
   "degree": 4,
   "graph": "Small-world",
-  "parameter1": 0.25,
+  "parameter1": 0.1,
   "parameter2": 3,
   "seed": 42
 }
