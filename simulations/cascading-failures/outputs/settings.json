@@ -1,7 +1,7 @@
 {
   "nodes": 370,
   "steps": 400,
-  "degree": 4,
+  "degree": 2,
   "graph": "Small-world",
   "parameter1": 0.1,
   "parameter2": 3,
